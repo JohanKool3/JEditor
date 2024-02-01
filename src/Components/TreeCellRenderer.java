@@ -30,6 +30,11 @@ public class TreeCellRenderer extends DefaultTreeCellRenderer{
 		
 		setIcon(ImageLoader.loadImage("images/document_small.png"));
 		
+
+		if(sel){
+			setBackground(getBackgroundSelectionColor());
+			setForeground(getBackgroundSelectionColor());
+		}
 		
 		return c;
 	}

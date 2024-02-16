@@ -19,7 +19,7 @@ public class TreeCellRenderer extends DefaultTreeCellRenderer{
 			boolean hasFocus) {
 
 		Component c = super.getTreeCellRendererComponent(tree, value,
-                selected, expanded, leaf, row, hasFocus);
+                sel, expanded, leaf, row, hasFocus);
 		
 		setOpaque(false);
 		setFont(new Font("Ubuntu", Font.PLAIN, 14));
@@ -29,12 +29,6 @@ public class TreeCellRenderer extends DefaultTreeCellRenderer{
 		}
 		
 		setIcon(ImageLoader.loadImage("images/document_small.png"));
-		
-
-		if(sel){
-			setBackground(getBackgroundSelectionColor());
-			setForeground(getBackgroundSelectionColor());
-		}
 		
 		return c;
 	}
